@@ -11,6 +11,21 @@ export const metadata: Metadata = {
     title: "Kayan Avenue Properties",
     description: "Find the right property for the lifestyle you deserve.",
     type: "website",
+    images: [
+      {
+        url: "/public/assets/office.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kayan Avenue Properties",
+        type: "image/jpg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kayan Avenue Properties",
+    description: "Find the right property for the lifestyle you deserve.",
+    images: ["/public/assets/office.jpg"],
   },
 };
 
