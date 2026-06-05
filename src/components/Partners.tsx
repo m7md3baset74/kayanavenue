@@ -16,7 +16,8 @@ const PARTNERS = [
   { name: "MAJID AL FUTTAIM", logo: "/partners/futtaim.jpg" },
   { name: "MERAAS",           logo: "/partners/meraas.jpg" },
 ];
-const DOUBLED_PARTNERS = [...PARTNERS, ...PARTNERS];
+
+const doubled = [...PARTNERS, ...PARTNERS];
 
 export default function Partners() {
   const { t } = useLang();
@@ -27,7 +28,7 @@ export default function Partners() {
       className="py-0 overflow-hidden"
       style={{ background: "#FFFFFF" }}
     >
-      {/* Header */}
+      {/* Header - يتأثر بالـ RTL عادي */}
       <div className="text-center px-5 sm:px-10 mb-2">
         <SectionEyebrow label={t("Our Partners", "شركاؤنا")} center />
         <h2
@@ -41,52 +42,67 @@ export default function Partners() {
         </h2>
       </div>
 
-      {/* Ticker */}
-      <div className="overflow-hidden relative">
-        {/* fade edges */}
+      {/* Ticker - معزول تماماً عن RTL */}
+      <div dir="ltr" style={{ overflow: "hidden", position: "relative" }}>
+        {/* Fade edges */}
         <div
-          className="absolute inset-y-0 start-0 z-10 w-8 md:w-24 pointer-events-none"
           style={{
-            background:
-              "linear-gradient(to right, #FFFFFF 0%, transparent 100%)",
+            position: "absolute",
+            inset: "0 auto 0 0",
+            zIndex: 10,
+            width: "clamp(32px, 6vw, 96px)",
+            background: "linear-gradient(to right, #FFFFFF, transparent)",
+            pointerEvents: "none",
           }}
         />
         <div
-          className="absolute inset-y-0 end-0 z-10 w-8 md:w-24 pointer-events-none"
           style={{
-            background:
-              "linear-gradient(to left, #FFFFFF 0%, transparent 100%)",
+            position: "absolute",
+            inset: "0 0 0 auto",
+            zIndex: 10,
+            width: "clamp(32px, 6vw, 96px)",
+            background: "linear-gradient(to left, #FFFFFF, transparent)",
+            pointerEvents: "none",
           }}
         />
 
-        <div className="partners-track flex">
-          {DOUBLED_PARTNERS.map((partner, i) => (
+        {/* Track */}
+        <div className="partners-track">
+          {doubled.map((partner, i) => (
             <div
               key={i}
-              className="flex items-center justify-center flex-shrink-0 transition-all duration-300 cursor-default group"
-              style={{ minWidth: "180px" }}
+              style={{
+                minWidth: 180,
+                flexShrink: 0,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
             >
               <Image
-  src={partner.logo}
-  alt={partner.name}
-  width={220}
-  height={220}
-  className="
-    object-contain
-    transition-all
-    duration-300
-    grayscale
-    opacity-75
-    group-hover:grayscale-0
-    group-hover:opacity-100
-    group-hover:scale-105
-  "
-  style={{
-    height: 220,
-    width: "auto",
-    maxWidth: 220,
-  }}
-/>
+                src={partner.logo}
+                alt={partner.name}
+                width={220}
+                height={220}
+                className="object-contain"
+                style={{
+                  height: 220,
+                  width: "auto",
+                  maxWidth: 220,
+                  filter: "grayscale(100%) opacity(0.75)",
+                  transition: "filter 0.3s, transform 0.3s",
+                }}
+                onMouseEnter={(e) => {
+                  const el = e.currentTarget as HTMLImageElement;
+                  el.style.filter = "grayscale(0%) opacity(1)";
+                  el.style.transform = "scale(1.08)";
+                }}
+                onMouseLeave={(e) => {
+                  const el = e.currentTarget as HTMLImageElement;
+                  el.style.filter = "grayscale(100%) opacity(0.75)";
+                  el.style.transform = "scale(1)";
+                }}
+              />
             </div>
           ))}
         </div>

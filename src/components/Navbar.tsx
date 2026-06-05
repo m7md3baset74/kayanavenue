@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { Globe } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 import { NAV_LINKS } from "@/data/content";
-import LogoSVG from "./LogoSVG";
 
 export default function Navbar() {
   const { t, toggleLang, isAr } = useLang();

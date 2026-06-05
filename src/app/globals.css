@@ -238,6 +238,7 @@ html[lang="en"] body {
   display: flex;
   animation: marqueeScroll 28s linear infinite;
   width: max-content;
+  will-change: transform;
 }
 .partners-section:hover .partners-track {
   animation-play-state: paused;
@@ -339,7 +340,4 @@ html[dir="rtl"] .mobile-menu {
 }
 html[dir="rtl"] .mobile-menu.open {
   transform: translateX(0);
-}
-html[dir="rtl"] .partners-track {
-  animation-direction: reverse;
 }

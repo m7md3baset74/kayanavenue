@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="hero-overlay" />
 
       <div
-        className="relative z-10 pb-60 md:pb-[110px] px-5 pt-16
+        className="relative z-10 pb-55 sm:pb-36 md:pb-[110px] px-5 pt-16
     sm:px-8
     md:pe-12
     md:ps-[72px]
