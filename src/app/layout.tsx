@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/public/assets/office.jpg",
+        url: "/assets/office.jpg",
         width: 1200,
         height: 630,
         alt: "Kayan Avenue Properties",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kayan Avenue Properties",
     description: "Find the right property for the lifestyle you deserve.",
-    images: ["/public/assets/office.jpg"],
+    images: ["/assets/office.jpg"],
   },
 };
 
