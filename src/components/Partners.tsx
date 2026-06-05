@@ -16,10 +16,10 @@ const PARTNERS = [
   { name: "MAJID AL FUTTAIM", logo: "/partners/futtaim.jpg" },
   { name: "MERAAS",           logo: "/partners/meraas.jpg" },
 ];
+const DOUBLED_PARTNERS = [...PARTNERS, ...PARTNERS];
 
 export default function Partners() {
   const { t } = useLang();
-  const doubled = [...PARTNERS, ...PARTNERS];
 
   return (
     <section
@@ -60,37 +60,33 @@ export default function Partners() {
         />
 
         <div className="partners-track flex">
-          {doubled.map((partner, i) => (
+          {DOUBLED_PARTNERS.map((partner, i) => (
             <div
               key={i}
               className="flex items-center justify-center flex-shrink-0 transition-all duration-300 cursor-default group"
               style={{ minWidth: "180px" }}
             >
               <Image
-                src={partner.logo}
-                alt={partner.name}
-                width={220}
-                height={220}
-                className="object-contain transition-all duration-300"
-                style={{
-                  height: 220,
-                  width: "auto",
-                  maxWidth: 220,
-                  filter: "grayscale(100%) opacity(0.75)",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.filter =
-                    "grayscale(0%) opacity(1)";
-                  (e.currentTarget as HTMLImageElement).style.transform =
-                    "scale(1.08)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.filter =
-                    "grayscale(100%) opacity(0.75)";
-                  (e.currentTarget as HTMLImageElement).style.transform =
-                    "scale(1)";
-                }}
-              />
+  src={partner.logo}
+  alt={partner.name}
+  width={220}
+  height={220}
+  className="
+    object-contain
+    transition-all
+    duration-300
+    grayscale
+    opacity-75
+    group-hover:grayscale-0
+    group-hover:opacity-100
+    group-hover:scale-105
+  "
+  style={{
+    height: 220,
+    width: "auto",
+    maxWidth: 220,
+  }}
+/>
             </div>
           ))}
         </div>
