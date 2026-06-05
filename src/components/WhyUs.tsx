@@ -49,7 +49,7 @@ export default function WhyUs() {
             style={{ minHeight: "clamp(280px, 50vw, 520px)" }}
           >
             <Image
-              src="/assets/why choose.jfif"
+              src="/assets/why-choose.jfif"
               alt="Why Choose Kayan Avenue"
               fill
               className="object-cover"
