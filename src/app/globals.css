@@ -75,7 +75,7 @@ html[lang="en"] body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('/assets/villa-hero.jpg');
+  background-image: url('/assets/pg-hero-test2.jpeg');
   background-size: cover;
   background-position: center 30%;
   animation: heroZoom 20s ease-in-out infinite alternate;
