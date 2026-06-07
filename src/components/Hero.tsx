@@ -9,14 +9,15 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex items-end overflow-hidden"
+      dir="ltr"
+      className="relative flex flex-col justify-end overflow-hidden"
       style={{ height: "100vh", minHeight: "680px" }}
     >
       <div className="hero-bg" />
       <div className="hero-overlay" />
 
       <div
-        className="relative z-10 pb-55 sm:pb-36 md:pb-[110px] px-5 pt-16
+        className="relative z-10 pb-55 sm:pb-36 md:pb-[110px] px-5 pt-16 
     sm:px-8
     md:pe-12
     md:ps-[72px]
@@ -57,8 +58,8 @@ export default function Hero() {
           style={{ color: "var(--text-muted)", maxWidth: "460px" }}
         >
           {t(
-            "Kayan Avenue Properties offers a refined real estate experience focused on premium properties, trusted guidance, and carefully selected opportunities across Dubai.",
-            "نقدم لك مجموعة مختارة من أفضل العقارات في المواقع المميزة بخبرة واحترافية تضمن لك أفضل استثمار.",
+            "Whether you're searching for your dream home or your next investment, we provide selected opportunities built on expertise and trust.",
+            " سواء كنت تبحث عن منزل أحلامك أو عن استثمارك القادم، فإننا نقدم فرصاً مختارة بعناية ومبنية على الخبرة والثقة.",
           )}
         </p>
 

@@ -41,15 +41,15 @@ export default function Navbar() {
           <img
   src="/logo-png.png"
   alt="Kayan Avenue Logo"
-  className="w-14 h-14 flex-shrink-0 object-contain"
+  className="w-14 h-14 md:w-15 md:h-15 flex-shrink-0 object-contain"
 />
           <div className="flex flex-col leading-none gap-0.5">
             <span
-              className="text-gold-gradient font-playfair text-[20px] font-semibold tracking-[3px]"
+              className="text-gold-gradient font-playfair text-[20px] md:text-[24px] font-semibold tracking-[3px]"
             >
               KAYAN
             </span>
-            <span className="ltr:ml-[-11] rtl:mr-[-11] text-[10px] tracking-[4px] font-medium uppercase"
+            <span className="ltr:ml-[-11] md:ltr:ml-[-4.5] rtl:mr-[-11] md:rtl:mr-[-7] text-[10px] tracking-[4px] font-medium uppercase"
               style={{ color: "rgba(201,168,76,0.72)" }}>
               — AVENUE —
             </span>

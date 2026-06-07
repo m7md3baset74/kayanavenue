@@ -50,18 +50,18 @@ export const STATS: StatItem[] = [
     id: 1,
     icon: "home",
     number: "+1200",
-    label: { en: "Properties Sold", ar: "عقار تم بيعه" },
+    label: { en: "Transactions Facilitated", ar: "المعاملات المُبرمة" },
   },
   {
     id: 2,
     icon: "users",
     number: "+850",
-    label: { en: "Happy Clients", ar: "عميل سعيد" },
+    label: { en: "Clients Served", ar: "عدد العملاء" },
   },
   {
     id: 3,
     icon: "award",
-    number: "+10",
+    number: "+15",
     label: { en: "Years Experience", ar: "سنوات من الخبرة" },
   },
   {
@@ -78,17 +78,19 @@ export const SERVICES: Service[] = [
     icon: "home",
     title: { en: "Buying & Selling Properties", ar: "شراء وبيع العقارات" },
     description: {
-      en: "We help you find the right property at the best value.",
-      ar: "نساعدك على العثور على العقار المناسب بأفضل قيمة.",
+      en: "Professional support for buying and selling residential and investment properties across Dubai.",
+      ar:"نساعد عملاءنا في شراء وبيع العقارات السكنية والاستثمارية في مختلف مناطق دبي بكل احترافية وثقة."
+,
     },
   },
   {
     id: 2,
     icon: "monitor",
-    title: { en: "Property Management", ar: "إدارة العقارات" },
+    title: { en: "Real Estate Advisory", ar:"الاستشارات العقارية"
+ },
     description: {
-      en: "Professional management services ensuring peace of mind and sustainable investment.",
-      ar: "خدمات إدارة احترافية تضمن لك راحة البال واستثمار مستدام.",
+      en: "Trusted market insights and professional advice to support informed real estate decisions.",
+      ar:"نقدم رؤية سوقية واضحة وتوجيهاً احترافياً يساعد عملاءنا على اتخاذ قرارات عقارية واثقة",
     },
   },
   {
@@ -96,26 +98,32 @@ export const SERVICES: Service[] = [
     icon: "dollar-sign",
     title: { en: "Investment Consultation", ar: "الاستشارات الاستثمارية" },
     description: {
-      en: "Specialized consultations to achieve the best investment returns.",
-      ar: "نقدم لك استشارات متخصصة لتحقيق أفضل عوائد استثمارية.",
+      en: "Expert guidance to help clients identify opportunities aligned with their investment goals.",
+      ar:"نقدم استشارات عقارية مدروسة لمساعدة عملائنا على اتخاذ قرارات استثمارية ناجحة."
+,
     },
   },
   {
     id: 4,
     icon: "box",
-    title: { en: "Property Rental", ar: "تأجير العقارات" },
+    title: { en: "Plots & Lands", ar:"الأراضي والقطع الاستثمارية"
+ },
     description: {
-      en: "We help you rent your property and find reliable tenants.",
-      ar: "نساعدك في تأجير عقارك وإيجاد مستأجرين موثوقين.",
+      en: "Explore residential and investment land opportunities in key growth areas across Dubai.",
+      ar:"نوفر فرصاً متنوعة للأراضي السكنية والاستثمارية في المناطق الأكثر طلباً ونمواً في دبي."
+,
     },
   },
   {
     id: 5,
     icon: "star",
-    title: { en: "Exclusive Opportunities", ar: "فرص عقارية حصرية" },
+    title: { en: "Exclusive Opportunities", ar:"الفرص الحصرية"
+ },
     description: {
-      en: "Exclusive access to the best opportunities before public listing.",
-      ar: "وصول حصري لأفضل الفرص قبل طرحها للعموم.",
+      en: "Discover handpicked properties and unique opportunities not widely available in the market.",
+      ar:"نمنح عملاءنا إمكانية الوصول إلى فرص عقارية مميزة تم اختيارها بعناية."
+
+,
     },
   },
   {
@@ -123,8 +131,9 @@ export const SERVICES: Service[] = [
     icon: "file-text",
     title: { en: "Off-Plan Opportunities", ar: "مشاريع على الخارطة" },
     description: {
-      en: "Invest in the latest projects before completion at special prices.",
-      ar: "استثمر في أحدث المشاريع قبل اكتمالها بأسعار مميزة.",
+      en: "Access carefully selected off-plan projects from Dubai’s leading developers.",
+      ar:"نوفر مجموعة مختارة من المشاريع العقارية الواعدة من أبرز المطورين العقاريين في دبي."
+,
     },
   },
 ];

@@ -75,9 +75,9 @@ html[lang="en"] body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('/assets/villa-hero.jpg');
+  background-image: url('/assets/villa-hero-big2.png');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 40%;
   animation: heroZoom 20s ease-in-out infinite alternate;
 }
 
@@ -92,10 +92,16 @@ html[lang="en"] body {
   background: linear-gradient(
     105deg,
     rgba(8, 8, 14, 1) 2%,
-    rgba(8, 8, 14, 1) 7%,
-    rgba(8, 8, 14, 0.2) 80%,
+    rgba(8, 8, 14, 1) 5%,
+    rgba(8, 8, 14, 0.2) 70%,
     rgba(8, 8, 14, 0.1) 100%
   );
+}
+@media (max-width: 767px) {
+  .hero-bg {
+    background-image: url('/assets/villa-hero-mobile.png');
+    background-position: center center;
+  }
 }
 
 /* ── Fade-up animations ────────────────────────── */

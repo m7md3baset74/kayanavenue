@@ -21,7 +21,7 @@ export default function About() {
           style={{ height: "clamp(280px, 45vw, 500px)" }}
         >
           <img
-            src="/assets/office.jpg"
+            src="/assets/office-new.jpeg"
             alt="Kayan Avenue Office"
             className="w-full h-full object-cover"
           />
@@ -35,18 +35,21 @@ export default function About() {
           />
           {/* Badge */}
           <div
-            className="absolute bottom-5 end-5 z-10 text-center rounded-2xl px-5 py-4"
+            className="absolute bottom-5 end-5 z-10 text-center rounded-2xl px-5 py-3"
             style={{
               background: "var(--gold-gradient)",
               color: "#0D0D14",
               boxShadow: "0 8px 30px rgba(201,168,76,0.4)",
             }}
           >
+            <span className="text-[10px] font-semibold tracking-wide opacity-85 mt-0 block">
+              {t("LED BY", "بقيادة")}
+            </span>
             <span
               className="block font-bold leading-none font-playfair"
               style={{ fontSize: "clamp(20px, 3vw, 26px)" }}
             >
-              +10
+              +15
             </span>
             <span className="text-[10px] font-semibold tracking-wide opacity-85">
               {t("Years Experience", "سنوات خبرة")}
@@ -75,8 +78,8 @@ export default function About() {
             style={{ color: "#666" }}
           >
             {t(
-              "Kayan Avenue Properties is a modern real estate brokerage built on professionalism, market knowledge, and long-term client relationships.",
-              "كيان أفينيو العقارية هي شركة وساطة عقارية عصرية تقوم على الاحترافية، وفهم السوق، وبناء علاقات طويلة الأمد مع العملاء."
+              "Kayan Avenue Properties is a luxury real estate brokerage offering premium properties and investment opportunities across Dubai.",
+             "كيان أفينيو العقارية هي شركة وساطة عقارية فاخرة تقدم عقارات مميزة وفرصاً استثمارية في مختلف أنحاء دبي."
             )}
           </p>
           <p
@@ -84,8 +87,17 @@ export default function About() {
             style={{ color: "#666" }}
           >
             {t(
-              "We specialize in helping clients buy and sell premium properties across Dubai's most desirable communities, offering a personalized experience tailored to each client's goals and lifestyle.",
-              "نساعد عملاءنا في شراء وبيع العقارات المميزة داخل أبرز المجتمعات السكنية في دبي، مع تقديم تجربة شخصية تناسب أهداف كل عميل وأسلوب حياته."
+              "We combine market expertise, transparency, and trusted guidance to help our clients make confident real estate decisions.",
+             "نجمع بين الخبرة السوقية والشفافية والتوجيه الموثوق لمساعدة عملائنا على اتخاذ قرارات عقارية بثقة."
+            )}
+          </p>
+          <p
+            className="text-[14px] leading-[1.95] mb-8"
+            style={{ color: "#666" }}
+          >
+            {t(
+              "Our commitment is simple: trusted advice, carefully selected opportunities, and long term client relationships.",
+             "التزامنا بسيط: استشارات موثوقة، وفرص مختارة بعناية، وعلاقات طويلة الأمد مع عملائنا."
             )}
           </p>
 

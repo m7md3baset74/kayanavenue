@@ -238,7 +238,7 @@ export default function Footer() {
             </h4>
             {[
               { svg: "phone",    text: "+971 58 586 0581" },
-              { svg: "mail",     text: "hany@kayanavenue.ae" },
+              { svg: "mail",     text: "Info@kayanavenue.ae" },
               { svg: "map-pin",  text: t("Business Bay, Dubai, UAE", "Business Bay، دبي، الإمارات") },
             ].map((item, i) => (
               <div

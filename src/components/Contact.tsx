@@ -34,7 +34,7 @@ export default function Contact() {
 
   const contactItems = [
     { icon: <Phone size={14} strokeWidth={1.8} />, text: "+971 58 586 0581" },
-    { icon: <Mail size={14} strokeWidth={1.8} />, text: "hany@kayanavenue.ae" },
+    { icon: <Mail size={14} strokeWidth={1.8} />, text: "Info@kayanavenue.ae" },
     {
       icon: <Globe size={14} strokeWidth={1.8} />,
       text: "www.kayanavenue.com",
