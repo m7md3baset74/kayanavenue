@@ -1,6 +1,6 @@
 "use client";
 
-import { Shield, MessageSquare, Users, FileText, Activity, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Shield, MessageSquare, Users, FileText, Activity, Instagram, Linkedin, Youtube, Waypoints } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 import { NAV_LINKS, FOOTER_SERVICES, FOOTER_STRIP_FEATURES } from "@/data/content";
 import Image from "next/image";
@@ -11,6 +11,7 @@ const STRIP_ICONS: Record<string, React.ReactNode> = {
   users:       <Users       size={28} strokeWidth={1.5} />,
   "file-text": <FileText    size={28} strokeWidth={1.5} />,
   activity:    <Activity    size={28} strokeWidth={1.5} />,
+  Waypoints:    <Waypoints     size={28} strokeWidth={1.5} />,
 };
 
 const WhatsAppIcon = () => (

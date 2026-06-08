@@ -24,18 +24,13 @@ export default function Hero() {
     max-w-[680px]"
       >
         {/* Eyebrow */}
-        <div className="flex items-center gap-3 mb-5 fade-up-1">
-          <span
-            className="block w-9 h-px flex-shrink-0"
-            style={{ background: "var(--gold-gradient)" }}
-          />
-          <span
-            className="text-[10.5px] font-semibold tracking-[4px] uppercase"
-            style={{ color: "var(--gold)" }}
-          >
-            {t("KAYAN AVENUE PROPERTIES", "كيان أفينيو العقارية")}
-          </span>
-        </div>
+        <div className="inline-flex items-center gap-2 mb-5 fade-up-1 px-3 py-1.5 rounded-full border border-yellow-300/25 bg-white/10" 
+     >
+  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--gold)" }} />
+  <span className="text-[10px] font-semibold tracking-[3px] uppercase" style={{ color: "var(--gold)" }}>
+    {t("KAYAN AVENUE PROPERTIES", "كيان أفينيو العقارية")}
+  </span>
+</div>
 
         {/* Title */}
         <h1
@@ -64,12 +59,12 @@ export default function Hero() {
         </p>
 
         {/* Buttons */}
-        <div className="flex gap-3 flex-wrap fade-up-4">
-          <a href="#properties" className="btn-primary">
+        <div className="flex w-fit flex-col md:flex-row gap-3 fade-up-4 ">
+          <a href="#properties" className="btn-primary w-fit sm:w-auto justify-center">
             <span>{t("Explore Properties", "استكشف العقارات")}</span>
             <ChevronLeft size={15} strokeWidth={2.5} />
           </a>
-          <button className="btn-secondary">
+          <button className="btn-secondary w-fit sm:w-auto justify-center">
             <span
               className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
               style={{

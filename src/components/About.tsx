@@ -78,17 +78,18 @@ export default function About() {
             style={{ color: "#666" }}
           >
             {t(
-              "Kayan Avenue Properties is a luxury real estate brokerage offering premium properties and investment opportunities across Dubai.",
-             "كيان أفينيو العقارية هي شركة وساطة عقارية فاخرة تقدم عقارات مميزة وفرصاً استثمارية في مختلف أنحاء دبي."
+              "Kayan Avenue is a boutique luxury real estate firm based in Dubai, offering carefully selected properties and investment opportunities.",
+            "كيان أفينيو هي شركة وساطة عقارية فاخرة مقرها دبي، تقدم عقارات وفرصاً استثمارية مختارة بعناية."
+
             )}
           </p>
           <p
-            className="text-[14px] leading-[1.95] mb-8"
+            className="whitespace-pre-line text-[14px] leading-[1.95] mb-8"
             style={{ color: "#666" }}
           >
             {t(
               "We combine market expertise, transparency, and trusted guidance to help our clients make confident real estate decisions.",
-             "نجمع بين الخبرة السوقية والشفافية والتوجيه الموثوق لمساعدة عملائنا على اتخاذ قرارات عقارية بثقة."
+             "نجمع بين الخبرة السوقية والشفافية والتوجيه الموثوق لمساعدة عملائنا على اتخاذ قرارات عقارية بثقة. \n ونحرص على تقديم تجربة عقارية ترتكز على فهم احتياجات عملائنا وتطلعاتهم."
             )}
           </p>
           <p
@@ -96,8 +97,8 @@ export default function About() {
             style={{ color: "#666" }}
           >
             {t(
-              "Our commitment is simple: trusted advice, carefully selected opportunities, and long term client relationships.",
-             "التزامنا بسيط: استشارات موثوقة، وفرص مختارة بعناية، وعلاقات طويلة الأمد مع عملائنا."
+              "Our commitment is simple: carefully selected opportunities, exceptional service, and long-term client relationships.",
+            "التزامنا بسيط: فرص مختارة بعناية، وخدمة استثنائية، وعلاقات طويلة الأمد مع عملائنا."
             )}
           </p>
 

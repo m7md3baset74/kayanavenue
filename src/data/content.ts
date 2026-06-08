@@ -224,4 +224,5 @@ export const FOOTER_STRIP_FEATURES = [
   { icon: "users",        en: "Professional Team",    ar: "فريق محترف"         },
   { icon: "file-text",    en: "Secure Contracts",     ar: "عقود آمنة"          },
   { icon: "activity",     en: "Deep Market Expertise",ar: "خبرة سوقية عميقة"   },
+  { icon: "Waypoints",    en: "Strong Industry Network",ar:"شبكة علاقات قوية"   },
 ];
