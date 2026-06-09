@@ -40,10 +40,10 @@ export default function Hero() {
             color: "var(--white)",
           }}
         >
-          {t("Find the right property", "نختار الموقع الأفضل")}
+          {t("Find the right property","اكتشف العقار المثالي")}
           <br />
           <span className="text-gold-gradient" style={{ fontStyle: "italic" }}>
-            {t("for the lifestyle you deserve.", "لتعيش الحياة التي تستحقها")}
+            {t("for the lifestyle you deserve.","لأسلوب الحياة الذي تستحقه")}
           </span>
         </h1>
 

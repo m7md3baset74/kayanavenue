@@ -7,17 +7,14 @@ export interface BilingualText {
 
 export interface Property {
   id: number;
-  image: string;
-  imageStyle?: string;
+  images: string[];
   badge: BilingualText;
-  badgeType: "sale" | "rent";
+  badgeType: "sale" | "offplan" | "ready";
   title: BilingualText;
   location: BilingualText;
   price: string;
   priceLabel: BilingualText;
-  area: string;
-  baths: number;
-  rooms: number;
+  unitTypes: BilingualText;
 }
 
 export interface Service {
