@@ -6,9 +6,9 @@ import { useState } from "react";
 import { SiWhatsapp } from "react-icons/si";
 import { useLang } from "@/context/LanguageContext";
 
-const WHATSAPP = "971564414679";
+const WHATSAPP = "971585860581";
 
-export default function ScrollTop() {
+export default function FloatingWhatsApp() {
   const { isAr } = useLang();
   const [hovered, setHovered] = useState(false);
 
@@ -39,6 +39,7 @@ export default function ScrollTop() {
 
   return (
     <div
+      dir="ltr"
       style={{
         position: "fixed",
         bottom: 28,

@@ -271,7 +271,7 @@ export default function Footer() {
                     </>
                   )}
                 </svg>
-                <span>{item.text}</span>
+                <span dir="ltr">{item.text}</span>
               </div>
             ))}
           </div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Phone, Mail, Globe, MapPin, Send } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 import SectionEyebrow from "./SectionEyebrow";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Contact() {
   const { t } = useLang();
@@ -27,9 +28,28 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    await new Promise((r) => setTimeout(r, 1200));
-    setStatus("sent");
-    setTimeout(() => setStatus("idle"), 4000);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setStatus("sent");
+        setForm({ name: "", phone: "", email: "", type: "buy", message: "" });
+        setTimeout(() => setStatus("idle"), 4000);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 4000);
+      }
+    } catch {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 4000);
+    }
   };
 
   const contactItems = [
@@ -126,7 +146,7 @@ export default function Contact() {
                   >
                     {item.icon}
                   </span>
-                  <span>{item.text}</span>
+                  <span dir="ltr">{item.text}</span>
                 </div>
               ))}
             </div>
@@ -221,7 +241,7 @@ export default function Contact() {
                     {t("Investment Consultation", "استشارة استثمارية")}
                   </option>
                   <option value="rent">
-                    {t("Rent Property", "تأجير عقار")}
+                    {t("Exclusive Opportunities", "الفرص الحصرية")}
                   </option>
                 </select>
               </div>
@@ -251,9 +271,7 @@ export default function Contact() {
                 className="btn-primary w-full justify-center"
                 style={{ opacity: status === "sending" ? 0.7 : 1 }}
               >
-                {status === "sent" ? (
-                  <span>{t("Message Sent ✓", "تم الإرسال ✓")}</span>
-                ) : status === "sending" ? (
+                {status === "sending" ? (
                   <span>{t("Sending…", "جاري الإرسال…")}</span>
                 ) : (
                   <>
@@ -262,6 +280,36 @@ export default function Contact() {
                   </>
                 )}
               </button>
+              <AnimatePresence mode="wait">
+                {(status === "sent" || status === "error") && (
+                  <motion.div
+                    key={status}
+                    initial={{ opacity: 0, y: -6, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 4, scale: 0.98 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="mt-3 rounded-lg px-4 py-3 text-[13px] font-medium text-center"
+                    style={{
+                      background:
+                        status === "sent"
+                          ? "rgba(52, 211, 153, 0.08)"
+                          : "rgba(248, 113, 113, 0.08)",
+                      border: `1px solid ${status === "sent" ? "rgba(52,211,153,0.25)" : "rgba(248,113,113,0.25)"}`,
+                      color: status === "sent" ? "#34d399" : "#f87171",
+                    }}
+                  >
+                    {status === "sent"
+                      ? t(
+                          "✓ Your message has been sent. We'll be in touch soon.",
+                          "✓ تم إرسال رسالتك. سنتواصل معك قريباً.",
+                        )
+                      : t(
+                          "✗ Something went wrong. Please try again.",
+                          "✗ حدث خطأ. يرجى المحاولة مجدداً.",
+                        )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </form>
           </div>
         </div>

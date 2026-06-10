@@ -7,7 +7,7 @@ import { PROPERTIES } from "@/data/content";
 import SectionEyebrow from "./SectionEyebrow";
 import { SiWhatsapp } from "react-icons/si";
 
-const WHATSAPP = "971564414679";
+const WHATSAPP = "971585860581";
 
 function PropertyCard({ prop }: { prop: (typeof PROPERTIES)[0] }) {
   const { t, isAr } = useLang();

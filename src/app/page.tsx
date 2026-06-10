@@ -8,7 +8,7 @@ import Partners  from "@/components/Partners";
 import WhyUs     from "@/components/WhyUs";
 import Contact   from "@/components/Contact";
 import Footer    from "@/components/Footer";
-import ScrollTop from "@/components/ScrollTop";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function HomePage() {
   return (
@@ -27,7 +27,7 @@ export default function HomePage() {
       </main>
 
       <Footer />
-      <ScrollTop />
+      <FloatingWhatsApp />
     </>
   );
 }

@@ -27,6 +27,11 @@ export const metadata: Metadata = {
     description: "Find the right property for the lifestyle you deserve.",
     images: ["/assets/office.jpg"],
   },
+  icons: {
+      icon: "/logo-png.png",
+      apple: "/logo-png.png",
+
+    },
 };
 
 export default function RootLayout({
