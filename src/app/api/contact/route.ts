@@ -16,8 +16,8 @@ export async function POST(req: Request) {
     };
 
     const result = await resend.emails.send({
-      from: "Kayan Avenue <onboarding@resend.dev>",
-      to: "mohamedabdelbasset265@gmail.com",
+      from: "Kayan Avenue <info@kayanavenue.ae>",
+      to: "info@kayanavenue.ae",
       replyTo: email,
       subject: `New Inquiry — ${typeLabel[type] ?? type}`,
       html: `
