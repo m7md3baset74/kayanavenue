@@ -146,7 +146,7 @@ export default function Contact() {
                   >
                     {item.icon}
                   </span>
-                  <span dir="ltr">{item.text}</span>
+                  <span dir="ltr" className="font-cairo">{item.text}</span>
                 </div>
               ))}
             </div>

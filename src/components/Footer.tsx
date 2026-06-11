@@ -27,7 +27,7 @@ export default function Footer() {
     <>
       {/* ── Strip ───────────────────────────────────── */}
       <div
-        className="flex flex-col md:flex-row items-center md:items-center justify-between gap-8 md:gap-10 px-6 md:px-10 py-10 md:py-11"
+        className="font-cairo flex flex-col md:flex-row items-center md:items-center justify-between gap-8 md:gap-10 px-6 md:px-10 py-10 md:py-11"
         style={{
           background: "var(--dark-2)",
           borderTop: "1px solid var(--border-gold)",
@@ -271,7 +271,7 @@ export default function Footer() {
                     </>
                   )}
                 </svg>
-                <span dir="ltr">{item.text}</span>
+                <span dir="ltr" className="font-cairo">{item.text}</span>
               </div>
             ))}
           </div>

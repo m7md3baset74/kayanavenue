@@ -15,7 +15,7 @@ export default function StatsBar() {
   const { t } = useLang();
 
   return (
-    <div className="stats-bar grid grid-cols-2 sm:grid-cols-4 mx-4 sm:mx-10 lg:mx-20 px-4 sm:px-10 md:py-5 py-2 -mt-19 md:-mt-10 md:-mb-16 -mb-29">
+    <div className="font-cairo stats-bar grid grid-cols-2 sm:grid-cols-4 mx-4 sm:mx-10 lg:mx-20 px-4 sm:px-10 md:py-5 py-2 -mt-19 md:-mt-10 md:-mb-16 -mb-29">
       {STATS.map((stat, i) => (
         <div
           key={stat.id}
