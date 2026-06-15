@@ -3,13 +3,23 @@ import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.kayanavenue.com"),
   title: "Kayan Avenue Properties | كيان أفينيو العقارية",
   description:
     "Kayan Avenue Properties — a refined real estate experience focused on premium properties, trusted guidance, and carefully selected opportunities across Dubai.",
-  keywords: "Dubai real estate, luxury properties, Kayan Avenue, كيان أفينيو",
+  keywords: "Dubai real estate, luxury properties, Kayan Avenue, كيان أفينيو, عقارات دبي",
+  alternates: {
+    canonical: "https://www.kayanavenue.com",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "Kayan Avenue Properties",
     description: "Find the right property for the lifestyle you deserve.",
+    url: "https://www.kayanavenue.com",
+    siteName: "Kayan Avenue Properties",
     type: "website",
     images: [
       {
@@ -17,7 +27,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "Kayan Avenue Properties",
-        type: "image/jpg",
+        type: "image/jpeg",
       },
     ],
   },
@@ -28,10 +38,9 @@ export const metadata: Metadata = {
     images: ["/assets/office.jpg"],
   },
   icons: {
-      icon: "/logo-png.png",
-      apple: "/logo-png.png",
-
-    },
+    icon: "/logo-png.png",
+    apple: "/logo-png.png",
+  },
 };
 
 export default function RootLayout({
