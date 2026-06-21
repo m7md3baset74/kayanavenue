@@ -62,8 +62,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
           rel="stylesheet"
         />
-      </head>
-      <body className="antialiased">
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-PQ0VC4JJ3P"
@@ -71,13 +69,15 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-PQ0VC4JJ3P');
-  `,
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PQ0VC4JJ3P');
+        `,
           }}
         />
+      </head>
+      <body className="antialiased">
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
